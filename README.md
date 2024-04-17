@@ -10,8 +10,12 @@ The REST API is developed with the following tech stack:
 - Django (3.2.4) - Web development framework in Python.
 - djangorestframework (3.12.4) - Library used in Django to build Rest APIs.
 - drf-spectacular (0.15.1) - OpenAPI 3 schema generation library for documentation of APIs.
-- Postgresql (15.4) - Database for the application.
+- PostgreSQL (13-alpine) - Database for the application.
 - flake8 - Tool that checks Python code for style and syntax errors.
+- Pandas (2.2.2) - Python library to process data.
+- Github Actions - CI/CD to run deployments and unit tests.
+
+![image](app/globant/resources/architecture.png)
 
 ## Database
 
