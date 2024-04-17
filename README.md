@@ -1,10 +1,6 @@
 # Data Engineering Coding Challenge
 
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
+This repository contains my solution for the coding challenge presented during the recruitment process. It includes my implementation to address the challenges and requirements provided as part of the evaluation.
 
 ## Architecture
 

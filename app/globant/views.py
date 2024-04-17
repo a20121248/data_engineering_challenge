@@ -197,7 +197,7 @@ SUM(CASE WHEN EXTRACT(QUARTER FROM E.hire_datetime)=4 THEN 1 ELSE 0 END) AS Q4
 class Report2ViewSet(viewsets.ModelViewSet):
     """View for report 2."""
     serializer_class = serializers.EmployeeSerializer
-    
+
     def list(self, request):
         with connection.cursor() as cursor:
             cursor.execute("""
