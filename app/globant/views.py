@@ -12,7 +12,6 @@ from core.models import Job, Department, Employee
 from globant import serializers
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import connection
-from django.http import JsonResponse
 
 class JobViewSet(viewsets.ModelViewSet):
     """View for manage job APIs."""

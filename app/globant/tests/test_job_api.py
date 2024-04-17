@@ -13,7 +13,7 @@ from core.models import Job
 
 from globant.serializers import JobSerializer
 
-JOBS_URL = reverse('job:job-list')
+JOBS_URL = reverse('globant:job-list')
 
 def create_job(**params):
     """Create and return a sample job."""
@@ -26,7 +26,7 @@ def create_job(**params):
     return job
 
 class PublicJobApiTests(TestCase):
-    """Test authenticated API requests."""
+    """Test API requests."""
 
     def setUp(self):
         self.client = APIClient()
@@ -38,7 +38,7 @@ class PublicJobApiTests(TestCase):
 
         res = self.client.get(JOBS_URL)
 
-        jobs = Job.objects.all().order_by('-id')
+        jobs = Job.objects.all().order_by('id')
         serializer = JobSerializer(jobs, many=True)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data, serializer.data)
