@@ -19,6 +19,7 @@ class Department(models.Model):
         return self.name
     
 class Employee(models.Model):
+    """Employee object."""
     name = models.CharField(max_length=100)
     hire_datetime = models.DateTimeField()
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
