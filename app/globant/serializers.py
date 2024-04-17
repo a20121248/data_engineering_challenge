@@ -10,23 +10,27 @@ from core.models import (
     Employee,
 )
 
+
 class JobSerializer(serializers.ModelSerializer):
     """Serializer for jobs."""
     class Meta:
         model = Job
         fields = ['id', 'name']
-        
+
+
 class DepartmentSerializer(serializers.ModelSerializer):
     """Serializer for deparments."""
     class Meta:
         model = Department
         fields = ['id', 'name']
 
+
 class EmployeeSerializer(serializers.ModelSerializer):
-    """Serializer for employees."""    
+    """Serializer for employees."""
     class Meta:
         model = Employee
         fields = ['id', 'name', 'hire_datetime', 'department', 'job']
+
 
 class MultipleFileUploadSerializer(serializers.Serializer):
     """Serializer for uploading multiple files."""

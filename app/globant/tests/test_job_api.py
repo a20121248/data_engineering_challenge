@@ -1,7 +1,6 @@
 """
 Tests for job APIs.
 """
-from decimal import Decimal
 
 from django.test import TestCase
 from django.urls import reverse
@@ -15,6 +14,7 @@ from globant.serializers import JobSerializer
 
 JOBS_URL = reverse('globant:job-list')
 
+
 def create_job(**params):
     """Create and return a sample job."""
     defaults = {
@@ -24,6 +24,7 @@ def create_job(**params):
 
     job = Job.objects.create(**defaults)
     return job
+
 
 class PublicJobApiTests(TestCase):
     """Test API requests."""
